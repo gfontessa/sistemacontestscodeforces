@@ -12,8 +12,8 @@ const PERFORMANCE_SHEET = 'Contests Performance';
 
 function onOpen() {
   SpreadsheetApp.getUi()
-    .createMenu('⭐ Análise de Contests - Codeforces')
-    .addItem('🚀 Gerar Relatório Completo', 'atualizarAnaliseCompleta')
+    .createMenu('📊 Análise de Contests - Codeforces')
+    .addItem('🎯 Gerar Relatório Completo', 'atualizarAnaliseCompleta')
     .addSeparator()
     .addItem('⚙️ Criar/Zerar Aba de Configurações', 'criarAbaConfiguracoes')
     .addItem('🎲 Criar/Zerar Abas de Banco de Dados', 'criarAbasDeBancoDeDados')
