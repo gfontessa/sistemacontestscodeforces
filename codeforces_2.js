@@ -314,7 +314,7 @@ function criarPlanilhaBaseDinamica(sheet, numProblems) {
     sheet.getRange(1, 1, sheet.getMaxRows(), sheet.getMaxColumns()).setFontFamily('Nunito').setFontSize(10).setVerticalAlignment('middle').setHorizontalAlignment('center');
 
     const titleRange = sheet.getRange(1, 3, 1, totalColunas - 2);
-    titleRange.merge().setValue('📈 RELATÓRIO DE CONTESTS');
+    titleRange.merge().setValue('📈 RELATÓRIO DE CONTESTS - LEONARDO POTTES');
     titleRange.setBackground('#4285f4').setFontColor('#ffffff').setFontWeight('bold');
     sheet.setRowHeight(1, 35);
 
@@ -326,7 +326,7 @@ function criarPlanilhaBaseDinamica(sheet, numProblems) {
     sheet.getRange(2, 9).setValue('PROBLEMAS');
     const colAnaliseInicio = colunasBase + colunasProblemas + 1;
     sheet.getRange(2, colAnaliseInicio).setValue('ANÁLISES');
-    sheet.setRowHeight(2, 25);
+    sheet.setRowHeight(2, 35);
 
     const subHeadersRange = sheet.getRange(3, 1, 1, totalColunas);
     subHeadersRange.setBackground('#434343').setFontColor('#ffffff').setFontWeight('bold');
@@ -390,7 +390,7 @@ function carregarConfiguracoes() {
 function criarAbaConfiguracoes() {
   const ss = SpreadsheetApp.getActiveSpreadsheet(); let sheet = ss.getSheetByName("Configurações"); if (!sheet) sheet = ss.insertSheet("Configurações", 0); sheet.clear(); const ui = SpreadsheetApp.getUi(); ui.alert("Criando/Zerando a aba de Configurações...");
   const headerRange = sheet.getRange("A1:B1"); headerRange.merge().setValue("⚙️ CONFIGURAÇÕES").setBackground("#4285f4").setFontColor("#ffffff").setFontWeight("bold").setHorizontalAlignment("center");
-  const data = [["HANDLE DO ATLETA", "Settop"], ["HANDLES DE ATLETAS DE MESMO NÍVEL", "goulther,julia_08,kojima,kojac,Sofiatpc,amorim,Pietra,Enzinho"], ["HANDLES DE ATLETAS DE NÍVEL ACIMA", "LucasCGar,ortsac,clarinha,hyakup,gustavo-d,Lalic,passinho,perchuts,Pagode_Paiva,Cabralbonzao,LeticiaFCS"], ["BOA POSIÇÃO NO RANKING", 600], ["MARGEM DE TEMPO PARA AC (minutos)", 10]];
+  const data = [["HANDLE DO ATLETA"], ["HANDLES DE ATLETAS DE MESMO NÍVEL"], ["HANDLES DE ATLETAS DE NÍVEL ACIMA"], ["BOA POSIÇÃO NO RANKING"], ["MARGEM DE TEMPO PARA AC (minutos)"]];
   sheet.getRange("A2:B6").setValues(data); sheet.getRange("A2:A6").setBackground("#000000").setFontColor("#ffffff").setFontWeight("bold"); sheet.getRange("A1:B6").setFontFamily("Nunito").setFontSize(10).setVerticalAlignment("middle");
   sheet.getRange("B2:B6").setHorizontalAlignment("left"); sheet.setColumnWidth(1, 250); sheet.setColumnWidth(2, 600); ui.alert("Aba de Configurações criada com sucesso!");
 }
